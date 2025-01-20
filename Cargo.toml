@@ -1,0 +1,9 @@
+[package]
+name = "semaphore-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.95"
+ruint = "1.12.4"
+zk-kit-imt = "0.0.6"
