@@ -12,7 +12,7 @@ pub struct Group {
 
 impl Group {
     pub fn new(leaves: Vec<LeanIMTNode>) -> Self {
-        if leaves.len() > 0 {
+        if !leaves.is_empty() {
             leaves.iter().for_each(|m| {
                 assert!(
                     Group::is_valid_leaf(m.clone()),
@@ -100,6 +100,16 @@ impl Group {
 
     fn is_valid_leaf(leaf: LeanIMTNode) -> bool {
         !leaf.is_empty() && leaf.ne("0")
+    }
+
+    // TODO wait for LeanIMT support
+    pub fn export(&self) -> String {
+        unimplemented!("Unsupported.");
+    }
+
+    // TODO wait for LeanIMT support
+    pub fn import(_json: &str) -> Self {
+        unimplemented!("Unsupported.");
     }
 }
 
