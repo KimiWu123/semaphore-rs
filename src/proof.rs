@@ -12,6 +12,7 @@ pub type G1 = (U256, U256);
 pub type G2 = ([U256; 2], [U256; 2]);
 pub struct Groth16Proof(pub G1, pub G2, pub G1);
 
+#[allow(dead_code)]
 pub struct SemaphorProof {
     merkle_tree_depth: u16,
     merkle_tree_root: U256,
@@ -23,26 +24,27 @@ pub struct SemaphorProof {
 
 pub struct Proof {}
 
+#[allow(dead_code)]
 impl Proof {
     fn generate_proof(
-        identity: Identity,
-        group: Group,
-        message: String,
-        scope: String,
-        merkle_tree_depth: u16,
+        _identity: Identity,
+        _group: Group,
+        _message: String,
+        _scope: String,
+        _merkle_tree_depth: u16,
     ) -> Result<SemaphorProof> {
         unimplemented!()
     }
 
-    fn verify_proof(proof: SemaphorProof) -> bool {
+    fn verify_proof(_proof: SemaphorProof) -> bool {
         unimplemented!()
     }
 
-    fn packGroth16Proof(proof: Groth16Proof) -> PackedGroth16Proof {
+    fn pack_groth16_proof(_proof: Groth16Proof) -> PackedGroth16Proof {
         unimplemented!()
     }
 
-    fn unpackGroth16Proof(proof: PackedGroth16Proof) -> Groth16Proof {
+    fn unpack_groth16_proof(_proof: PackedGroth16Proof) -> Groth16Proof {
         unimplemented!()
     }
 }
